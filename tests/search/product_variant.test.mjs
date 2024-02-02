@@ -6,7 +6,7 @@ import { expect } from "chai";
 
 describe("Search Functionality API Tests" , () =>{
     const url = 'http://localhost:3001';
-    describe("Search By Name" , () =>{
+    describe("Search By Name , Description , Variant_Name" , () =>{
         it("Should fetch the data by name" , (done) => {
             const name = "Test_Product"
             request(url)
