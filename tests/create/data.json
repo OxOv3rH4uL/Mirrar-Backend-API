@@ -1,0 +1,21 @@
+{
+    "product_name":"Test_Product",
+    "product_description": "Test_Product_Description",
+    "product_price":"T1000",
+    "product_variants":[{
+        "variant_name":"T_VAR1",
+        "variant_sku":"TEST_SKU1",
+        "variant_additionalCost":"T1",
+        "variant_stockCount":20
+    },{
+        "variant_name":"T_VAR2",
+        "variant_sku":"TEST_SKU2",
+        "variant_additionalCost":"T2",
+        "variant_stockCount":20
+    },{
+        "variant_name":"T_VAR3",
+        "variant_sku":"TEST_SKU3",
+        "variant_additionalCost":"T3",
+        "variant_stockCount":20
+    }]
+}	
