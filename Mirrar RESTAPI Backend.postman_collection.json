@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "41360683-3b87-4d1e-a4e1-ac03b1563c0f",
+		"name": "Mirrar RESTAPI Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31267143"
+	},
+	"item": [
+		{
+			"name": "Start",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Products No Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No Data Product and Variants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/product_variants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product_variants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating Product and Variant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Test_Product1\",\r\n    \"product_description\": \"Test_Product_Description1\",\r\n    \"product_price\":\"T1000\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"T_VAR1\",\r\n        \"variant_sku\":\"TEST_SKU1\",\r\n        \"variant_additionalCost\":\"T1\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"T_VAR2\",\r\n        \"variant_sku\":\"TEST_SKU2\",\r\n        \"variant_additionalCost\":\"T2\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"T_VAR3\",\r\n        \"variant_sku\":\"TEST_SKU3\",\r\n        \"variant_additionalCost\":\"T3\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/create/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"create",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Product By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/search/name/Test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"name",
+						"Test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Product By Description",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/search/desc/Test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"desc",
+						"Test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Product By Variant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/search/variant_name/T_VAR1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"variant_name",
+						"T_VAR1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating Another Product and Variant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Test_Product_Delete\",\r\n    \"product_description\": \"Test_Product_Delete\",\r\n    \"product_price\":\"T1000\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"T_VAR1\",\r\n        \"variant_sku\":\"TEST_SKU1\",\r\n        \"variant_additionalCost\":\"T1\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"T_VAR2\",\r\n        \"variant_sku\":\"TEST_SKU2\",\r\n        \"variant_additionalCost\":\"T2\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"T_VAR3\",\r\n        \"variant_sku\":\"TEST_SKU3\",\r\n        \"variant_additionalCost\":\"T3\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/create/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"create",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Data Searching",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/search/name/ZZZ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"name",
+						"ZZZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Data Searching 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/search/desc/ZZZ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"desc",
+						"ZZZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Data Searching 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/search/variant_name/ZZZ",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"variant_name",
+						"ZZZ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product and its Variants",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/delete/product/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"delete",
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Data Deletion",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/delete/product/2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"delete",
+						"product",
+						"2000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Test\",\r\n    \"product_description\":\"Test\",\r\n    \"product_price\":\"19\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/update/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"update",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listing All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating Variant of the Product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variant_name\":\"TEST\",\r\n    \"variant_sku\":\"Test_123\",\r\n    \"variant_additionalCost\":\"12\",\r\n    \"variant_stockCount\":1999\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/update/product/1/variant/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"update",
+						"product",
+						"1",
+						"variant",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listing Products and its Variants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/product_variants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product_variants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Data Updation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Test\",\r\n    \"product_description\":\"Test\",\r\n    \"product_price\":\"19\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/update/product/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"update",
+						"product",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Variant Updation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/update/product/1/variant/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"update",
+						"product",
+						"1",
+						"variant",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating Product with incomplete fields",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
