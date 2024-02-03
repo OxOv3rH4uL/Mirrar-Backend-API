@@ -17,7 +17,13 @@ Before running the project, follow these steps:
 3. **Change MySQL Credentials**:
    Update the MySQL credentials in the script according to your username and password.
 
-4. **Running the Tests**:
+4. **Running the RESTAPI**:
+   Open the browser and visit the following link to enjoy the RESTAPI Service
+    ```bash
+    http://localhost:3001/
+    ```
+
+5. **For Running the Tests**:
    Ensure to run these commands in 2 different terminals/command lines:
    ```bash
    node app.js
