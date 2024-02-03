@@ -40,6 +40,33 @@ Mirrar REST API uses Node.js for Backend Services and MySQL for the database. It
 
 ![Schema Image](/assets/mirrar1.png)
 
+
+## **Database Schema:**
+
+### Product Table
+```sql
+CREATE TABLE IF NOT EXISTS Product (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    product_name VARCHAR(255) NOT NULL,
+    product_description TEXT NOT NULL,
+    product_price VARCHAR(100) NOT NULL
+);
+```
+
+### Variants Table
+```sql
+CREATE TABLE IF NOT EXISTS Variants (
+    variant_id INT PRIMARY KEY AUTO_INCREMENT,
+    variant_name VARCHAR(255) NOT NULL,
+    variant_sku VARCHAR(50) NOT NULL,
+    variant_additionalCost VARCHAR(100) NOT NULL,
+    variant_stockCount INT NOT NULL,
+    product_id INT,
+    FOREIGN KEY (product_id) REFERENCES Product(id) ON DELETE CASCADE
+);
+```
+
+
 ## **Available Endpoints:**
 
 1. `/` (GET):
