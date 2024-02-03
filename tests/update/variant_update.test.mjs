@@ -4,8 +4,8 @@ import update_variant_details from '../update/update_variant.json' assert {type:
 
 describe("Update Variant API Test" , () =>{
     const url = 'http://localhost:3001';
-    const product_id = '45';
-    const variant_id = '80';
+    const product_id = '1';
+    const variant_id = '2';
     it("Update Variant" , (done) =>{
         request(url)
         .put(`/update/product/${product_id}/variant/${variant_id}`)

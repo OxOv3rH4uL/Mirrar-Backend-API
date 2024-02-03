@@ -3,7 +3,7 @@ import { expect } from "chai";
 
 describe("Deleting Product API Test" , () => {
     const url = "http://localhost:3001"
-    const product_id = 40;
+    const product_id = 2;
     it("Should Delete a product" , (done) =>{
         request(url)
         .delete('/delete/product/' + product_id)

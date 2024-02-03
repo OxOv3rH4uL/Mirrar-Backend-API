@@ -3,8 +3,6 @@ import { expect } from "chai";
 import product_details from '../create/data.json' assert { type: "json" };
 
 
-
-// console.log(product_details);
 describe("Creating Product and Variant Functionality Tests!" , () =>{
     const url = "http://localhost:3001";
     describe("Creating a product" , () =>{
@@ -15,7 +13,7 @@ describe("Creating Product and Variant Functionality Tests!" , () =>{
             .set('Accept','application/json')
             .end(function(err,res){
                 
-                expect(res.statusCode).to.be.equal(200);
+                expect(res.statusCode).to.be.equal(201);
                 expect(res.text).to.be.equal("Datas Inserted Successfully!");
                 if(err){
                     throw err;
