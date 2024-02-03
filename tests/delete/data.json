@@ -1,0 +1,13 @@
+{   
+    "id":1000,
+    "product_name":"Test_Product",
+    "product_description": "Test_Product_Description2",
+    "product_price":"T1000",
+    "product_variants":[{
+        "variant_id": 100,
+        "variant_name":"T_VAR1",
+        "variant_sku":"TEST_SKU1",
+        "variant_additionalCost":"T1",
+        "variant_stockCount":20
+    }]
+}

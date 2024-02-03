@@ -305,7 +305,11 @@ app.get('/search/variant_name/:name',(req,res) => {
         if(err){
             res.status(500).send(`Internal Server Error: ${err}`);
         }else{
-            res.status(200).json(result);
+            if(Object.keys(result).length != 0){
+                res.status(200).json(result); 
+            }else{
+                res.status(404).send("NOT FOUND!");
+            }
         }
     })
 })
@@ -376,7 +380,7 @@ app.delete('/delete/product/:id',(req,res) =>{
                 res.status(404).send("ID NOT FOUND!");
                 return;
             }else{
-                const up_query = "select * from product";
+                const up_query = "select * from product,variants";
                 db.query(up_query,(err,result) => {
                     if(err){
                         res.status(500).send(`Internal Server Error : ${err}`);
@@ -433,7 +437,7 @@ app.put('/update/product/:id', (req, res) => {
 });
 
 
-// ############### UPDATE PRODUCT VARIANT BY THEIR PRODUCT ID AND VARIANT IT ###############
+// ############### UPDATE PRODUCT VARIANT BY THEIR PRODUCT ID AND VARIANT ID ###############
 app.put('/update/product/:productId/variant/:variantId',(req,res) =>{
     const prodId = req.params.productId;
     const varId = req.params.variantId;
@@ -471,6 +475,44 @@ app.put('/update/product/:productId/variant/:variantId',(req,res) =>{
     })
 })
 
+// ############### TEST PURPOSE ###############
+app.post('/create/product/test',(req,res)=>{
+    const prod = req.body;
+    const id = prod.id;
+    const name = prod.product_name;
+    const description = prod.product_description;   
+    const price = prod.product_price;
+    const variant = prod.product_variants;
+
+    if(!id || !name || !description || !price || variant === undefined){
+        res.status(400).send("Make sure to Enter All Details");
+        return;
+    }
+    const query = "insert into product values(?,?,?,?)";
+    db.query(query,[id,name,description,price],(err,result)=>{
+        if(err){
+            res.status(500).send(`Internal Server Error: ${err}`);
+        }else{
+            const variantId = variant[0].variant_id;
+            const variantName = variant[0].variant_name;
+            const variantsku = variant[0].variant_sku;
+            const additional_cost = variant[0].variant_additionalCost;
+            const stock_count = variant[0].variant_stockCount; 
+            const variant_query = "insert into variants values(?,?,?,?,?,?)";
+            db.query(variant_query,[variantId,variantName,variantsku,additional_cost,stock_count,id],(e,r)=>{
+                if(e){
+                    res.status(500).send(`Internal Server Error: ${err}`)
+                }else{
+                    res.status(200).send("Successful!");
+                }
+            })
+        }
+    })
+})
+
+
+
+
 // ############### INVALID PATHS ###############
 app.use((req,res,next)=>{
     res.status(404).send("Not Found!");
@@ -479,5 +521,8 @@ app.use((req,res,next)=>{
 app.listen(port, () => {
     ;
 });
+
+
+
 
 export default app;
