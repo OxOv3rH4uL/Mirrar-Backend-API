@@ -15,9 +15,11 @@ Before running the project, follow these steps:
    npm install
    ```
 3. **Change MySQL Credentials**:
+   
    Update the MySQL credentials in the script according to your username and password.
 
 4. **Running the RESTAPI**:
+   
    Open the browser and visit the following link to enjoy the RESTAPI Service
     ```bash
     http://localhost:3001/
@@ -77,10 +79,6 @@ Mirrar REST API uses Node.js for Backend Services and MySQL for the database. It
      - If id is found, the product along with its variants are deleted. Else, 404 not found is produced.
 
 
-Certainly! Here's the addition for the end of your README.md:
-
----
-
 ## **Testing:**
 
 Unit tests have been written for all the endpoints and functionalities. Each test describes the function it's testing. You can simply run all the tests by using the following command:
@@ -90,4 +88,8 @@ npm run test
 ```
 
 This will inform users about the availability of unit tests and how to run them.
+
+## **Conclusion:**
+
+This project was really fun to work with!
 
