@@ -1,4 +1,4 @@
-CREATING PRODUCT: http://localhost:3001/create/product
+CREATING PRODUCT 
 {
     "name":"Black T-Shirt for Men",
     "description": "Elegant T-Shirt For Stylish Men",
@@ -21,18 +21,20 @@ CREATING PRODUCT: http://localhost:3001/create/product
     }]
 }	
 
-GETTING PRODUCT AND THEIR VARIANTS = http://localhost:3001/product_variants
-GETTING ALL PRODUCTS = http://localhost:3001/products
-
 
 UPDATE PRODUCT
 {
-    "product_name":"PAVAN",
-    "product_description":"PAVAN IS A VERY GOOD BOY!",
-    "product_price":"KAGAGAGA POO"
+    "product_name":"Updated_Product",
+    "product_description":"Updated Product_Description",
+    "product_price":"190"
 }
 
 UPDATE VARIANT
 
-
+{
+    "variant_name":"TestVar",
+    "variant_sku":"TestSKU",
+    "variant_additionalCost":"15",
+    "variant_stockCount":20
+}
 

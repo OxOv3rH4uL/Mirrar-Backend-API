@@ -2,9 +2,11 @@ import mysql from 'mysql';
 import express from 'express';
 import cors from 'cors';
 import bodyparser from 'body-parser';
+import { config } from 'dotenv';
 
+config();
 const app = express();
-const port = 3001;
+const port = process.env.PORT;
 
 
 app.use(cors());
@@ -19,8 +21,8 @@ app.use((err,req,res,next)=>{
 // ############### MYSQL CONNECTION ###############
 const db = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "root",
+    user: process.env.mysqluser,
+    password: process.env.password,
 });
 
 db.connect((err) => {
@@ -204,7 +206,7 @@ app.post('/create/product',(req,res) => {
                             res.status(500).send("Make sure to Give All Variant Details Properly!");
                             // return;
                         }else{
-                            const get_query = "select * from product,variants";
+                            const get_query = "select * from product";
                             db.query(get_query,(err,result)=>{
                                 if(err){
                                     console.log(`Internal Server Error: ${err}`);
@@ -298,16 +300,12 @@ app.get('/search/desc/:description',(req,res) => {
 // ############### SEARCH BY VARIANT NAME ###############
 app.get('/search/variant_name/:name',(req,res) => {
     const varName = req.params.name;
-    const query = "SELECT product.*, variants.* FROM product JOIN variants ON variants.variant_id = product.id WHERE variants.variant_name LIKE ?";
+    const query = "select * from product,variants where variants.variant_name like ? and variants.product_id=product.id";
     db.query(query,[`%${varName}%`],(err,result)=>{
         if(err){
             res.status(500).send(`Internal Server Error: ${err}`);
         }else{
-            if(Object.keys(result).length != 0){
-                res.status(200).json(result); 
-            }else{
-                res.status(404).send("NOT FOUND!");
-            }
+            res.status(200).json(result);
         }
     })
 })
@@ -347,7 +345,7 @@ app.get('/search',(req,res)=>{
     }else if(req.query?.variant_name){
         search_query = req.query.variant_name;
         //another way of writing this one it seems mysql ftw
-        const query = "SELECT product.*, variants.* FROM product JOIN variants ON variants.product_id = product.id WHERE variants.variant_name LIKE ?";
+        const query = "select * from product,variants where variants.variant_name like ? and variants.product_id=product.id";
         db.query(query,[`%${search_query}%`],(err,result)=>{
             if(err){
                 res.status(500).send(`Internal Server Error: ${err}`);
@@ -460,7 +458,7 @@ app.put('/update/product/:productId/variant/:variantId',(req,res) =>{
                 res.status(404).send("ID NOT FOUND!");
                 return;
             }else{
-                const up_query = "select * from variant where variant_id = ? and product_id = ?";
+                const up_query = "select * from product,variants where variants.variant_id = ? and variants.product_id = ? and variants.variant_id=product.id";
                 db.query(up_query,[varId,prodId],(err,result)=>{
                     if(err){
                         res.status(500).send(`Internal Server Error: ${err}`);

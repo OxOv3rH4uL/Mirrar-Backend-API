@@ -1,0 +1,717 @@
+{
+	"info": {
+		"_postman_id": "c2add05f-6370-4132-ac86-04e895afdc66",
+		"name": "Mirrar RESTAPI Postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31267143"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3001/products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variant_name\":\"TestVar\",\r\n    \"variant_sku\":\"TestSKU\",\r\n    \"variant_additionalCost\":\"15\",\r\n    \"variant_stockCount\":20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/product_variants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variant_name\":\"TestVar\",\r\n    \"variant_sku\":\"TestSKU\",\r\n    \"variant_additionalCost\":\"15\",\r\n    \"variant_stockCount\":20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/product_variants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product_variants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/update/product/1/variant/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variant_name\":\"TestVar\",\r\n    \"variant_sku\":\"TestSKU\",\r\n    \"variant_additionalCost\":\"15\",\r\n    \"variant_stockCount\":20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/update/product/1/variant/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"update",
+						"product",
+						"1",
+						"variant",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/product_variants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"variant_name\":\"TestVar\",\r\n    \"variant_sku\":\"TestSKU\",\r\n    \"variant_additionalCost\":\"15\",\r\n    \"variant_stockCount\":20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/product_variants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product_variants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/update/product/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Updated_Product_Name\",\r\n    \"product_description\":\"Updated Description\",\r\n    \"product_price\":\"19\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/update/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"update",
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/delete/product/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Black Shirt\",\r\n    \"product_description\": \"Elegant Shirt For Stylish Men\",\r\n    \"product_price\":\"1500\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/delete/product/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"delete",
+						"product",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/search?variant_name=L",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Black Shirt\",\r\n    \"product_description\": \"Elegant Shirt For Stylish Men\",\r\n    \"product_price\":\"1500\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/search?variant_name=L",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "variant_name",
+							"value": "L"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/search?desc=Stylish",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Black Shirt\",\r\n    \"product_description\": \"Elegant Shirt For Stylish Men\",\r\n    \"product_price\":\"1500\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/search?desc=Stylish",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "desc",
+							"value": "Stylish"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/search?name=Shirt",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Black Shirt\",\r\n    \"product_description\": \"Elegant Shirt For Stylish Men\",\r\n    \"product_price\":\"1500\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/search?name=Shirt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Shirt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/search/variant_name/M",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Black Shirt\",\r\n    \"product_description\": \"Elegant Shirt For Stylish Men\",\r\n    \"product_price\":\"1500\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/search/variant_name/M",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"variant_name",
+						"M"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/search/desc/Shirt",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Black Shirt\",\r\n    \"product_description\": \"Elegant Shirt For Stylish Men\",\r\n    \"product_price\":\"1500\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/search/desc/Shirt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"desc",
+						"Shirt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/search/name/Black",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Black Shirt\",\r\n    \"product_description\": \"Elegant Shirt For Stylish Men\",\r\n    \"product_price\":\"1500\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/search/name/Black",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"name",
+						"Black"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/product_variants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Black Shirt\",\r\n    \"product_description\": \"Elegant Shirt For Stylish Men\",\r\n    \"product_price\":\"1500\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/product_variants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product_variants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Black Shirt\",\r\n    \"product_description\": \"Elegant Shirt For Stylish Men\",\r\n    \"product_price\":\"1500\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/create/product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Black Shirt\",\r\n    \"product_description\": \"Elegant Shirt For Stylish Men\",\r\n    \"product_price\":\"1500\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/create/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"create",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/create/product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Purple T-Shirt\",\r\n    \"product_description\": \"Elegant T-Shirt For Stylish Men\",\r\n    \"product_price\":\"1000\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/create/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"create",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/search/variant_name/test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Purple T-Shirt\",\r\n    \"product_description\": \"Elegant T-Shirt For Stylish Men\",\r\n    \"product_price\":\"1000\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/search/variant_name/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"variant_name",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/search/desc/test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Purple T-Shirt\",\r\n    \"product_description\": \"Elegant T-Shirt For Stylish Men\",\r\n    \"product_price\":\"1000\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/search/desc/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"desc",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/search/name/test",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Purple T-Shirt\",\r\n    \"product_description\": \"Elegant T-Shirt For Stylish Men\",\r\n    \"product_price\":\"1000\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/search/name/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"search",
+						"name",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/product_variants",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Purple T-Shirt\",\r\n    \"product_description\": \"Elegant T-Shirt For Stylish Men\",\r\n    \"product_price\":\"1000\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/product_variants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product_variants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Purple T-Shirt\",\r\n    \"product_description\": \"Elegant T-Shirt For Stylish Men\",\r\n    \"product_price\":\"1000\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_name\":\"Purple T-Shirt\",\r\n    \"product_description\": \"Elegant T-Shirt For Stylish Men\",\r\n    \"product_price\":\"1000\",\r\n    \"product_variants\":[{\r\n        \"variant_name\":\"L\",\r\n        \"variant_sku\":\"123456\",\r\n        \"variant_additionalCost\":\"10\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"M\",\r\n        \"variant_sku\":\"123455\",\r\n        \"variant_additionalCost\":\"5\",\r\n        \"variant_stockCount\":20\r\n    },{\r\n        \"variant_name\":\"XL\",\r\n        \"variant_sku\":\"123457\",\r\n        \"variant_additionalCost\":\"15\",\r\n        \"variant_stockCount\":20\r\n    }]\r\n}\t\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
