@@ -1,4 +1,3 @@
-Here's the formatted README.md:
 
 ---
 
